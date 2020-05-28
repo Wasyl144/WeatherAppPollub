@@ -15,6 +15,9 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AboutUSComponent } from './about/about-us/about-us.component';
+import { CommentWriterComponent } from './about/comment-writer/comment-writer.component';
+import { CommentViewerComponent } from './about/comment-viewer/comment-viewer.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ContactComponent,
     AboutComponent,
     PageNotFoundComponent,
+    AboutUSComponent,
+    CommentWriterComponent,
+    CommentViewerComponent,
     
   ],
   imports: [
