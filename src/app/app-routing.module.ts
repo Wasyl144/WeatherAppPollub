@@ -7,12 +7,11 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component'
 
 
 const routes: Routes = [
-  {path:"/home", component:HomeComponent},
-  {path:"/contact", component:ContactComponent},
-  {path:"/about", component:AboutComponent},
+  {path:"home", component:HomeComponent},
+  {path:"contact", component:ContactComponent},
+  {path:"about", component:AboutComponent},
+  {path:"", redirectTo:"/home", pathMatch:"full"}, // wejście na strone główna przekierowuje nas do głównego komponentu
   {path:"**", component:PageNotFoundComponent}, // Wszystkie adresy, które które nienależą do ścieżek
-  
-  
 ];
 
 @NgModule({
