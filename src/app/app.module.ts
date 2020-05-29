@@ -18,7 +18,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AboutUSComponent } from './about/about-us/about-us.component';
 import { CommentWriterComponent } from './about/comment-writer/comment-writer.component';
 import { CommentViewerComponent } from './about/comment-viewer/comment-viewer.component';
-import {ReactiveFormsModule, FormsModule} from '@angular/forms'
+import {ReactiveFormsModule, FormsModule} from '@angular/forms';
+import { ViewerComponent } from './home/viewer/viewer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import {ReactiveFormsModule, FormsModule} from '@angular/forms'
     AboutUSComponent,
     CommentWriterComponent,
     CommentViewerComponent,
+    ViewerComponent,
     
   ],
   imports: [
@@ -46,6 +49,7 @@ import {ReactiveFormsModule, FormsModule} from '@angular/forms'
     BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
+    HttpClientModule,
     
   ],
   providers: [],

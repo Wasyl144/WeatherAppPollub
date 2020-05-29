@@ -1,0 +1,40 @@
+<!-- <div class="display__wrapper" *ngIf="WeatherData.cod==200; else errorMessage"> -->
+<div class="display__wrapper">
+    <div class="card__wrapper">
+        <mat-card class="card">
+            <mat-card-header>
+                <mat-card-title>{{WeatherData.name}}</mat-card-title>
+                <mat-card-subtitle>Temperature: {{WeatherData.main.temp - 273.15 | number}} &deg;C </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <img src="http://openweathermap.org/img/wn/{{WeatherData.weather[0].icon}}@2x.png"
+                    alt="{{WeatherData.weather[0].description}}">
+                <p>
+                    <b>Desctiption:</b>
+                    <br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                </p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="list__wrapper">
+        <mat-card class="list">
+            <h2>More info</h2>
+            <mat-list-item>Pressure: {{WeatherData.main.pressure}} hPa </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>Wind speed: {{WeatherData.wind.speed}} m/s </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>Temperature: {{WeatherData.main.temp - 273.15 | number}} </mat-list-item>
+        </mat-card>
+    </div>
+</div>
+
+<ng-template #errorMessage>
+    <div class="error__wrapper" >
+        <mat-card class="card_1">
+            <h1>Sorry server is propably down or you put a wrong City name :D</h1>
+        </mat-card>
+    </div>
+</ng-template>
