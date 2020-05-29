@@ -11,20 +11,29 @@ export class HomeComponent implements OnInit {
   constructor(private weatherService: WeatherService) { }
 
   weatherData: any; // zmienna na dane
+  errorData: any;
 
-  show:boolean = false;
+  show: boolean = false;
 
   ngOnInit(): void {
 
   }
 
   onSubmit(city: string) {
-    this.weatherService.getWeather(city).subscribe(data => { //dane przypisujemy do naszej zmiennej, nasłuchuje zmianny zmiennej
-      this.weatherData = data;
-      console.log(this.weatherData); //loguje do konsoli sprawdzając czy nazse dane się pojawiają
-    });
-    setTimeout(()=>[
-      this.show=true
-    ],500)
+    this.show=false; // resetuje te zmienne aby uniknąć błędów
+    this.errorData = null;
+    setTimeout(() => [
+      this.weatherService.getWeather(city).subscribe(data => { //dane przypisujemy do naszej zmiennej, nasłuchuje zmianny zmiennej
+        this.weatherData = data;
+      },
+        err => { //dane odnośnie errorów przypisuje do zmiennej
+          this.errorData = err;
+        }),
+    ], 500)
+    setTimeout( ()=>[ // Lazy loading
+      this.show = true
+    ],1000
+    )
+    
   }
 }

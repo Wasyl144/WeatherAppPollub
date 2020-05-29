@@ -12,6 +12,7 @@ export class ViewerComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

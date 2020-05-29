@@ -15,5 +15,15 @@
 
 
 <div class="weather" *ngIf="show">
-        <app-viewer [WeatherData]="weatherData"></app-viewer>
+        <div *ngIf="!errorData; else ErrorHandler">
+                <app-viewer [WeatherData]="weatherData"></app-viewer>
+        </div>
 </div>
+
+<ng-template #ErrorHandler>
+        <div >
+                <mat-card class="errorTemplate">
+                        <mat-card-title>Problem z serwerem, bądź nie ma takiego miasta.</mat-card-title>
+                </mat-card>
+        </div>
+</ng-template>
