@@ -18,6 +18,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AboutUSComponent } from './about/about-us/about-us.component';
 import { CommentWriterComponent } from './about/comment-writer/comment-writer.component';
 import { CommentViewerComponent } from './about/comment-viewer/comment-viewer.component';
+import {ReactiveFormsModule, FormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -43,6 +44,8 @@ import { CommentViewerComponent } from './about/comment-viewer/comment-viewer.co
     MatIconModule,
     MatListModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+    FormsModule,
     
   ],
   providers: [],

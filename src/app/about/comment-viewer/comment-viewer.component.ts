@@ -12,4 +12,5 @@ export class CommentViewerComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  displayedColumns: string[] = ['Nickname', 'E-Mail', 'Comment']
 }
