@@ -23,8 +23,6 @@ import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { ViewerComponent } from './home/viewer/viewer.component';
 import { HttpClientModule } from '@angular/common/http';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 
 @NgModule({
   declarations: [
