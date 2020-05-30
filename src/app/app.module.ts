@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { MaterialModule } from './material/material.module';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -22,6 +23,9 @@ import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { ViewerComponent } from './home/viewer/viewer.component';
 import { HttpClientModule } from '@angular/common/http';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +43,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
+
     MaterialModule,
     LayoutModule,
     MatToolbarModule,
@@ -50,7 +55,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
