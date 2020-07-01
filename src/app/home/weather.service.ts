@@ -8,7 +8,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class WeatherService {
 
-  private readonly URL_API: string = "http://api.openweathermap.org/data/2.5/weather?q="; //pierwsza czesc adresu
+  private readonly URL_API: string = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q="; //pierwsza czesc adresu
   private readonly URL_API2: string = "&appid=" + key; // druga czesc adresu
 
   constructor(private http: HttpClient) { }

@@ -24,7 +24,6 @@ import { ViewerComponent } from './home/viewer/viewer.component';
 import { HttpClientModule } from '@angular/common/http';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,8 +40,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-
+    AppRoutingModule
     MaterialModule,
     LayoutModule,
     MatToolbarModule,
