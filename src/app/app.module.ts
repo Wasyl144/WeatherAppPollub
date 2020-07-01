@@ -40,8 +40,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-
+    AppRoutingModule
     MaterialModule,
     LayoutModule,
     MatToolbarModule,
